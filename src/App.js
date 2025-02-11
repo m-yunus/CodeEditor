@@ -18,7 +18,7 @@ const CodeEditorWithPreview = () => {
         { language, code }
       );
 
-      setOutput(response.data.output || "No output received.");
+      setOutput(response.data.output || response?.data?.error);
     } catch (error) {
       setOutput("Error executing code.");
     } finally {
